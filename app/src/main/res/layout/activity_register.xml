@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_picture"
+    tools:context=".RegisterActivity">
+
+    <Button
+        android:id="@+id/btnSign_Up"
+        android:layout_width="105dp"
+        android:layout_height="61dp"
+        android:onClick="saveNewUserButton"
+        android:text="SIGN UP"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxConfirmPass" />
+
+    <EditText
+        android:id="@+id/txtBoxUsernameRegister"
+        android:layout_width="296dp"
+        android:layout_height="65dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/person"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/txtCreateAnAccount"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/txtCreateAnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="256dp"
+        android:text="Create an account"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="#231F20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtBoxPasswordRegister"
+        android:layout_width="296dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+
+        app:layout_constraintStart_toStartOf="@+id/txtBoxUsernameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxUsernameRegister" />
+
+    <EditText
+        android:id="@+id/txtBoxConfirmPass"
+        android:layout_width="296dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+
+        app:layout_constraintStart_toStartOf="@+id/txtBoxPasswordRegister"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxPasswordRegister" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="266dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxConfirmPass" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="233dp"
+        android:layout_height="217dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtCreateAnAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

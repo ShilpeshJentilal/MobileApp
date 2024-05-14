@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="auto"
+    tools:context=".DisplaySurveyStatesActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="-52dp">
+
+    <EditText
+        android:id="@+id/txtboxDPercentage"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="0%"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/txtboxNAoDPercentage"
+        app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+    <EditText
+        android:id="@+id/txtboxSDPercentage"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="0%"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/txtboxDPercentage"
+        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/txtboxAPercentage"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="0%"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/txtboxSAPercentage"
+        app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+    <EditText
+        android:id="@+id/txtboxNAoDPercentage"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="0%"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/txtboxAPercentage"
+        app:layout_constraintTop_toTopOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/txtQuestioninDSSA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Question 1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="15dp"
+        android:text="Neither Agree or Disagree"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/txtQuestionTextinDSS"
+        android:layout_width="343dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="8dp"
+        android:text="This is and exmaple of question for survey"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestioninDSSA" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Strongly Agree"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtQuestionTextinDSS"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuestionTextinDSS" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Agree"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Disagree"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Strongly Disagree"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <Button
+        android:id="@+id/btnNextinDSS"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:onClick="nextButton"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnPreviousinDSS" />
+
+    <Button
+        android:id="@+id/btnPreviousinDSS"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="120dp"
+        android:onClick="previousButton"
+        android:text="Privous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/txtboxSAPercentage"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="68dp"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:inputType="textPersonName"
+        android:text="0%"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="@+id/textView18" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="52dp"
+        android:text="Total Participations"
+        app:layout_constraintStart_toStartOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/txtBoxTotalParticipation"
+        android:layout_width="64dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="0"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/txtboxSDPercentage"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

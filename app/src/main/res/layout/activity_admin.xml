@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_picture"
+    android:backgroundTintMode="src_over"
+    android:onClick="gotoDisplaySurveyInGraph"
+    tools:context=".AdminActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="56dp"
+        android:onClick="gotoCreateSurevy"
+        android:text="Create Survey"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txtWelcome"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcome" />
+
+    <Button
+        android:id="@+id/btnEditPS"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:onClick="gotoEdiPublishedSurvey"
+        android:text="Edit Published Surveys"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnDeleteSurveys"
+        app:layout_constraintStart_toStartOf="@+id/btnDeleteSurveys"
+        app:layout_constraintTop_toTopOf="@+id/btnPublishedSurvey" />
+
+    <Button
+        android:id="@+id/btnPublishedSurvey"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="12dp"
+        android:onClick="gotoPublishedSurvey"
+        android:text="Publish Survey"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/btnDeleteSurveys"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:layout_marginStart="20dp"
+        android:onClick="gotoDeleteSurvey"
+        android:text="Delete Surveys"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/button" />
+
+    <Button
+        android:id="@+id/btnDisplaySurveyResponses"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:onClick="gotoDisplaySurveyInGraph"
+        android:text="Display Survey Reponses in graph"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditPS"
+        app:layout_constraintStart_toStartOf="@+id/btnEditPS"
+        app:layout_constraintTop_toTopOf="@+id/btnDisplayStates" />
+
+    <Button
+        android:id="@+id/btnDisplayStates"
+        android:layout_width="158dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="8dp"
+        android:onClick="gotoDisplaySurveyStates"
+        android:text="Display Survey States"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnPublishedSurvey"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnPublishedSurvey"
+        app:layout_constraintTop_toBottomOf="@+id/btnPublishedSurvey" />
+
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Welcome "
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogoutAdmin"
+        android:layout_width="137dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="56dp"
+        android:onClick="Logout"
+        android:text="Log Out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnDisplayStates" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

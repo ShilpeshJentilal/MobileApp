@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentActivity">
+
+    <TextView
+        android:id="@+id/txtwelcomeStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Welcome "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="407dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtwelcomeStudent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="20dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="1dp"
+                android:background="#9A0E30"
+                android:paddingTop="5dp"
+                android:text="ID"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtSurveyTitleModule"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#9A0E30"
+                android:paddingTop="5dp"
+                android:text="Module"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtStartDate"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#9B0E30"
+                android:paddingTop="5dp"
+                android:text="StartDate"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtEndDate"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#9B0E30"
+                android:paddingTop="5dp"
+                android:text="EndDate"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="91dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:background="#9A0E30"
+                android:paddingTop="5dp"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtSurveyList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Survey List"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtwelcomeStudent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyView"
+        android:layout_width="408dp"
+        android:layout_height="432dp"
+        android:layout_marginTop="39dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="logout"
+        android:text="Log out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcyView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

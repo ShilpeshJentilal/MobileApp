@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PublishedSurveyActivity">
+
+    <TextView
+        android:id="@+id/txtSurveyTitle"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:text="Survey Title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spnSurveyOption"
+        app:layout_constraintStart_toStartOf="@+id/spnSurveyOption"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnPublish"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="52dp"
+        android:onClick="publishsurvey"
+        android:text="Publish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSelectEndDate" />
+
+    <EditText
+        android:id="@+id/txtBoxStartDate"
+        android:layout_width="378dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/edit"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="SELECT DATE"
+        android:inputType="date"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/txtSurveyTitle3"
+        app:layout_constraintTop_toBottomOf="@+id/spnSurveyOption" />
+
+    <TextView
+        android:id="@+id/txtSurveyTitle2"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:text="End Date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtBoxStartDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxStartDate" />
+
+    <Spinner
+        android:id="@+id/spnSurveyOption"
+        android:layout_width="378dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="100dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/surveylistspinner"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtBoxEndDate"
+        android:layout_width="378dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edit"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="SELECT DATE"
+        android:inputType="date"
+        android:paddingLeft="10dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/txtSurveyTitle2"
+        app:layout_constraintTop_toBottomOf="@+id/txtSurveyTitle2" />
+
+    <Button
+        android:id="@+id/btnSelectStartDate"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:onClick="setOnClickstart"
+        android:text="Select Date"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/btnclear"
+        app:layout_constraintTop_toTopOf="@+id/btnclear" />
+
+    <Button
+        android:id="@+id/btnclear2"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
+        android:onClick="clearendDate"
+        android:text="Clear"
+        app:layout_constraintStart_toStartOf="@+id/txtBoxEndDate"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxEndDate" />
+
+    <Button
+        android:id="@+id/btnclear"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="4dp"
+        android:onClick="clearstartDate"
+        android:text="Clear"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/spnSurveyOption"
+        app:layout_constraintTop_toBottomOf="@+id/txtBoxStartDate" />
+
+    <Button
+        android:id="@+id/btnSelectEndDate"
+        android:layout_width="97dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:onClick="setOnClickend"
+        android:text="Select Date"
+        app:layout_constraintStart_toEndOf="@+id/btnclear2"
+        app:layout_constraintTop_toTopOf="@+id/btnclear2" />
+
+    <TextView
+        android:id="@+id/txtSurveyTitle3"
+        android:layout_width="122dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:text="Start Date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/spnSurveyOption"
+        app:layout_constraintTop_toBottomOf="@+id/spnSurveyOption" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
