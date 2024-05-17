@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SurveyQuestion9_Activity">
+    tools:context=".StudentSurveyQuestion9Controller">
 
     <TextView
         android:id="@+id/txtTakeQuestion9"

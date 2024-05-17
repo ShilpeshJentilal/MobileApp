@@ -5,7 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_picture"
-    tools:context=".RegisterActivity">
+    tools:context=".MainRegisterController">
+
+    <ImageView
+        android:id="@+id/imageView100"
+        android:layout_width="300dp"
+        android:layout_height="217dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtCreateAnAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41"
+        app:srcCompat="@drawable/img" />
 
     <Button
         android:id="@+id/btnSign_Up"
@@ -89,15 +100,5 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBoxConfirmPass" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="233dp"
-        android:layout_height="217dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtCreateAnAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

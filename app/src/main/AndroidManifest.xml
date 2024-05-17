@@ -14,163 +14,163 @@
         android:theme="@style/Theme.ApplicationSurvey"
         tools:targetApi="31">
         <activity
-            android:name=".SurveyRespondGraphActivity"
+            android:name=".AdminSurveyRespondOverviewGraphController"
             android:exported="false"
-            android:parentActivityName=".PublishedSurveyListforGraph_Activity">
+            android:parentActivityName=".AdminPublishedSurveyListOverviewInGraphController">
         <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PublishedSurveyListforGraph_Activity"
-            android:parentActivityName=".AdminActivity"
+            android:name=".AdminPublishedSurveyListOverviewInGraphController"
+            android:parentActivityName=".AdminHomeController"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PublishedSurveyListActivity"
+            android:name=".AdminPublishedSurveyListController"
             android:exported="false"
-            android:parentActivityName=".AdminActivity">
+            android:parentActivityName=".AdminHomeController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DisplaySurveyStatesActivity"
+            android:name=".AdminDisplaySurveyOverviewController"
             android:exported="false"
-            android:parentActivityName=".PublishedSurveyListActivity">
+            android:parentActivityName=".AdminPublishedSurveyListController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".EditPublishedSurveyActivity"
+            android:name=".AdminEditPublishedSurveyController"
             android:exported="false"
-            android:parentActivityName=".AdminActivity">
+            android:parentActivityName=".AdminHomeController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".DeleteSurveyActivity"
+            android:name=".AdminDeleteSurveyController"
             android:exported="false"
-            android:parentActivityName=".AdminActivity">
+            android:parentActivityName=".AdminHomeController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion10_Activity"
+            android:name=".StudentSurveyQuestion10Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion9_Activity"
+            android:name=".StudentSurveyQuestion9Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion8_Activity"
+            android:name=".StudentSurveyQuestion8Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion7_Activity"
+            android:name=".StudentSurveyQuestion7Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion6_Activity"
+            android:name=".StudentSurveyQuestion6Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion5_Activity"
+            android:name=".StudentSurveyQuestion5Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion4_Activity"
+            android:name=".StudentSurveyQuestion4Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion3_Activity"
+            android:name=".StudentSurveyQuestion3Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion2_Activity"
+            android:name=".StudentSurveyQuestion2Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".SurveyQuestion1_Activity"
+            android:name=".StudentSurveyQuestion1Controller"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".PublishedSurveyActivity"
+            android:name=".AdminPublishSurveyController"
             android:exported="false"
-            android:parentActivityName=".AdminActivity">
+            android:parentActivityName=".AdminHomeController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CreateSurveyActivity"
+            android:name=".AdminCreateSurveyController"
             android:exported="false"
-            android:parentActivityName=".AdminActivity">
+            android:parentActivityName=".AdminHomeController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".StudentActivity"
+            android:name=".StudentHomeController"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdminActivity"
+            android:name=".AdminHomeController"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".MainRegisterController"
             android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainLoginController">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".MainLoginController"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

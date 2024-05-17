@@ -13,37 +13,41 @@ import com.example.applicationsurvey.Model.Admin
 import com.example.applicationsurvey.Model.DataBaseHelper
 import com.example.applicationsurvey.Model.Student
 
-class MainActivity : AppCompatActivity() {
+class MainLoginController : AppCompatActivity() {
+
+    /**
+     * Initializes the activity.
+     */
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         getSupportActionBar()?.setTitle("Survey")
-        deleteExpiredPublishedSurveys()
-
+        // Uncomment the line below if you want to delete expired published surveys on activity start
+        // deleteExpiredPublishedSurveys()
     }
 
     /**
-     * Takes the user to the register page.
-     * @param view The view that triggered the function.
+     * Redirects the user to the register page.
      */
     fun gotoRegiserPage(view: View){
-        val intent = Intent(this, RegisterActivity::class.java)
+        val intent = Intent(this, MainRegisterController::class.java)
         startActivity(intent)
     }
 
+    /**
+     * Deletes expired published surveys.
+     * Note: This function is currently commented out. Uncomment it if needed.
+     */
     fun deleteExpiredPublishedSurveys(){
         val db=DataBaseHelper(this)
-       // db.deleteExpiredPublishedSurveys()
+        // db.deleteExpiredPublishedSurveys()
     }
 
-
     /**
-     * @param view The view that triggered the login attempt (the login button).
-     *
-     * This function attempts to log in the user using the provided username and password. If the login is successful,
-     * the user is redirected to either the AdminActivity or the StudentActivity, depending on whether they are an
-     * administrator or a student. If the login is unsuccessful, an error message is displayed.
+     * Handles the login button click event.
+     * Attempts to log in the user using the provided username and password.
+     * Redirects the user to the appropriate home page based on their role (admin or student).
      */
     fun loginButton(view: View){
         val userName = findViewById<EditText>(R.id.txtBoxUsername).text.toString().lowercase()
@@ -51,38 +55,35 @@ class MainActivity : AppCompatActivity() {
         val message = findViewById<TextView>(R.id.txtmessage)
         val db = DataBaseHelper(this)
 
-        if(userName.isEmpty()||userPassword.isEmpty()) {
+        if(userName.isEmpty() || userPassword.isEmpty()) {
             message.text = "Please insert Username and Password"
-        }else {
-            val myDataBase = DataBaseHelper(this)
-            val result = myDataBase.getUser(Student(-1, userName, userPassword))
-            val result2 = myDataBase.getAdminUser(Admin(-1,userName,userPassword))
+        } else {
+            val result = db.getUser(Student(-1, userName, userPassword))
+            val result2 = db.getAdminUser(Admin(-1, userName, userPassword))
 
             if (result == -1) {
-                if (result2 == -1){
+                if (result2 == -1) {
                     message.text = "User does not exist"
-                }else if (result == -2){
+                } else if (result == -2) {
                     message.text = "Cannot open database"
-                }else{
+                } else {
+                    // Admin login successful
                     Toast.makeText(this, "You logged in successfully as admin", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this, AdminActivity::class.java)
-                    intent.putExtra("Admin",userName)
+                    val intent = Intent(this, AdminHomeController::class.java)
+                    intent.putExtra("Admin", userName)
                     startActivity(intent)
                 }
             } else if (result == -2) {
                 message.text = "Error Can't Open Database"
             } else {
-                var studentId = db.getStudentID(userName).toString()
+                // Student login successful
+                val studentId = db.getStudentID(userName).toString()
                 Toast.makeText(this, "You logged in successfully", Toast.LENGTH_LONG).show()
-                val intent = Intent(this, StudentActivity::class.java)
-                intent.putExtra("StudentName",userName)
-                intent.putExtra("StudentId",studentId.toString())
-
+                val intent = Intent(this, StudentHomeController::class.java)
+                intent.putExtra("StudentName", userName)
+                intent.putExtra("StudentId", studentId)
                 startActivity(intent)
             }
         }
     }
-
-
-
 }

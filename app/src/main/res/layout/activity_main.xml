@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_picture"
-    tools:context=".MainActivity">
+    tools:context=".MainLoginController">
 
 
     <Button
@@ -94,13 +94,13 @@
         app:layout_constraintTop_toBottomOf="@+id/txtBoxPassword" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="232dp"
-        android:layout_height="243dp"
+        android:id="@+id/imageView100"
+        android:layout_width="300dp"
+        android:layout_height="217dp"
         app:layout_constraintBottom_toTopOf="@+id/txtBoxUsername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/img" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentActivity">
+    tools:context=".StudentHomeController">
 
     <TextView
         android:id="@+id/txtwelcomeStudent"
@@ -38,7 +38,7 @@
                 android:layout_width="20dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="1dp"
-                android:background="#9A0E30"
+                android:background="#3F51B5"
                 android:paddingTop="5dp"
                 android:text="ID"
                 android:textAlignment="center"
@@ -50,7 +50,7 @@
                 android:layout_width="91dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="1dp"
-                android:background="#9A0E30"
+                android:background="#3F51B5"
                 android:paddingTop="5dp"
                 android:text="Module"
                 android:textAlignment="center"
@@ -63,7 +63,7 @@
                 android:layout_width="91dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="1dp"
-                android:background="#9B0E30"
+                android:background="#3F51B5"
                 android:paddingTop="5dp"
                 android:text="StartDate"
                 android:textAlignment="center"
@@ -76,7 +76,7 @@
                 android:layout_width="91dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="1dp"
-                android:background="#9B0E30"
+                android:background="#3F51B5"
                 android:paddingTop="5dp"
                 android:text="EndDate"
                 android:textAlignment="center"
@@ -89,7 +89,7 @@
                 android:layout_width="91dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="1dp"
-                android:background="#9A0E30"
+                android:background="#3F51B5"
                 android:paddingTop="5dp"
                 android:text="Status"
                 android:textAlignment="center"

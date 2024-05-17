@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SurveyRespondGraphActivity">
+    tools:context=".AdminSurveyRespondOverviewGraphController">
 
     <Button
         android:id="@+id/btnpreviousinpiechart"
@@ -12,7 +12,7 @@
         android:layout_height="54dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="464dp"
-        android:onClick="previousButton"
+        android:onClick="onPreviousButtonClick"
         android:text="Previous"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/pie_chart" />
@@ -22,7 +22,7 @@
         android:layout_width="117dp"
         android:layout_height="54dp"
         android:layout_marginEnd="32dp"
-        android:onClick="nextButton"
+        android:onClick="onNextButtonClick"
         android:text="Next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/btnpreviousinpiechart" />
@@ -46,7 +46,7 @@
         android:layout_height="535dp"
         android:layout_marginTop="164dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

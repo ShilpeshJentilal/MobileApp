@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PublishedSurveyActivity">
+    tools:context=".AdminPublishSurveyController">
 
     <TextView
         android:id="@+id/txtSurveyTitle"
@@ -23,7 +23,7 @@
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:layout_marginTop="52dp"
-        android:onClick="publishsurvey"
+        android:onClick="publishSurvey"
         android:text="Publish"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -101,7 +101,7 @@
         android:layout_width="97dp"
         android:layout_height="56dp"
         android:layout_marginTop="4dp"
-        android:onClick="clearendDate"
+        android:onClick="clearEndDate"
         android:text="Clear"
         app:layout_constraintStart_toStartOf="@+id/txtBoxEndDate"
         app:layout_constraintTop_toBottomOf="@+id/txtBoxEndDate" />
@@ -123,7 +123,7 @@
         android:layout_width="97dp"
         android:layout_height="56dp"
         android:layout_marginStart="24dp"
-        android:onClick="setOnClickend"
+        android:onClick="setOnClickEnd"
         android:text="Select Date"
         app:layout_constraintStart_toEndOf="@+id/btnclear2"
         app:layout_constraintTop_toTopOf="@+id/btnclear2" />

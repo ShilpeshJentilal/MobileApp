@@ -6,48 +6,53 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.applicationsurvey.Model.DataBaseHelper
+import com.example.applicationsurvey.Model.PublishedSurvey
 
-class PublishedSurveyListActivity : AppCompatActivity() {
+class AdminPublishedSurveyListController : AppCompatActivity() {
 
     private lateinit var sqliteHelper: DataBaseHelper
     private lateinit var recyclerView: RecyclerView
-    private var adapter: PublishedSurveyListAdapter? = null
+    private var adapter: AdminPublishedSurveyListAdapterController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_published_survey_list)
-        getSupportActionBar()?.setTitle("Display Survey States")
+        supportActionBar?.title = "Display Survey States"
 
         sqliteHelper = DataBaseHelper(this)
         initView()
         initRecyclerView()
         getPublishedSurveys()
-        adapter?.setOnClickView {
-            val intent = Intent(this, DisplaySurveyStatesActivity::class.java)
-            intent.putExtra("PublishedSurvey",it)
+
+        adapter?.setOnClickView { publishedSurvey ->
+            val intent = Intent(this, AdminDisplaySurveyOverviewController::class.java).apply {
+                putExtra("PublishedSurvey", publishedSurvey)
+            }
             startActivity(intent)
-
         }
-
     }
+
+    /**
+     * Initializes the view components.
+     */
     private fun initView() {
         recyclerView = findViewById(R.id.itemryclerinsurveylist)
     }
 
+    /**
+     * Initializes the RecyclerView with a layout manager and adapter.
+     */
     private fun initRecyclerView() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = PublishedSurveyListAdapter(getDatabase())
+        adapter = AdminPublishedSurveyListAdapterController(sqliteHelper)
         recyclerView.adapter = adapter
-
     }
 
-    private fun getDatabase(): DataBaseHelper {
-        sqliteHelper = DataBaseHelper(this)
-        return sqliteHelper
-    }
-
+    /**
+     * Fetches the list of published surveys from the database and updates the adapter.
+     */
     private fun getPublishedSurveys() {
-        val psList = sqliteHelper.getPublishedSurvey()
-        adapter?.addItems(psList)
+        val publishedSurveys = sqliteHelper.getPublishedSurvey()
+        adapter?.addItems(publishedSurveys)
     }
 }

@@ -7,14 +7,14 @@
     android:background="@drawable/background_picture"
     android:backgroundTintMode="src_over"
     android:onClick="gotoDisplaySurveyInGraph"
-    tools:context=".AdminActivity">
+    tools:context=".AdminHomeController">
 
     <Button
         android:id="@+id/button"
         android:layout_width="158dp"
         android:layout_height="142dp"
         android:layout_marginTop="56dp"
-        android:onClick="gotoCreateSurevy"
+        android:onClick="gotoCreateSurvey"
         android:text="Create Survey"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/txtWelcome"
@@ -24,7 +24,7 @@
         android:id="@+id/btnEditPS"
         android:layout_width="158dp"
         android:layout_height="142dp"
-        android:onClick="gotoEdiPublishedSurvey"
+        android:onClick="gotoEditPublishedSurvey"
         android:text="Edit Published Surveys"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/btnDeleteSurveys"
@@ -96,7 +96,7 @@
         android:layout_width="137dp"
         android:layout_height="57dp"
         android:layout_marginTop="56dp"
-        android:onClick="Logout"
+        android:onClick="logout"
         android:text="Log Out"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

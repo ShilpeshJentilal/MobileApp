@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
+        android:onClick="gotoDisplaySurveyStates"
         android:text="VIEW STATES"
         app:layout_constraintBottom_toBottomOf="@+id/txtsurveytitleinlist"
         app:layout_constraintStart_toEndOf="@+id/txtsurveytitleinlist"
